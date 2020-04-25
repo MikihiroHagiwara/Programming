@@ -7,7 +7,21 @@
         <title>MyNews</title>
     </head>
     <body>
-        <h1>東京</h1>
-        <h2>ミシガン</h2>
+        <h1>Myニュース作成画面</h1>
     </body>
 </html>
+
+
+@extends('layouts.profile')
+
+@section('title', 'My プロフィール')
+
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <h2>My プロフィール</h2>
+        </div>
+    </div>
+</div>
+@endsection
