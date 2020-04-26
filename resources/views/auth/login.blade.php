@@ -1,4 +1,4 @@
-extends('layouts.admin')
+@extends('layouts.admin')
 
 @section('content')
     <div class="container">
@@ -9,7 +9,7 @@ extends('layouts.admin')
 
                     <div class="login-body card-body">
                         <form method="POST" action="{{ route('login') }}">
-                            @csrf
+                            {{ csrf_field() }}
 
                             <div class="form-group row">
                                 <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('messages.E-Mail Address') }}</label>
@@ -43,7 +43,7 @@ extends('layouts.admin')
                                 <div class="col-md-6 offset-md-4">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('messages.Remember Me') }}
+                                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
                                         </label>
                                     </div>
                                 </div>
